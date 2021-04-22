@@ -42,10 +42,23 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 **Preguntas**
 
 * ¿Qué es un Azure Function?
+  > Azure Function es una solución para ejecutar fácilmente pequeños fragmentos de código o “funciones” en la nube, que nos presenta una multitud de nuevos triggers para poder       ejecutarlo.
 * ¿Qué es serverless?
+  > La computación sin servidor (o serverless para abreviar) es un modelo de ejecución en el que el proveedor en la nube (AWS, Azure o Google Cloud) es responsable de ejecutar       un fragmento de código mediante la asignación dinámica de los recursos. Y cobrando solo por la cantidad de recursos utilizados para ejecutar el código.
 * ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?
+  > Integration Runtime (IR) es la infraestructura informática utilizada por Azure Data Factory para proporcionar las siguientes capacidades de integración de datos en               * diferentes entornos de red:
+    * Flujo de datos : ejecute un flujo de datos en un entorno informático administrado de Azure.
+    * Movimiento de datos : copie datos entre almacenes de datos en la red pública y almacenes de datos en la red privada (local o red privada virtual). Brinda soporte para           conectores integrados, conversión de formato, mapeo de columnas y transferencia de datos escalable y de alto rendimiento.
+    * Despacho de actividades : envíe y supervise las actividades de transformación que se ejecutan en una variedad de servicios informáticos como Azure Databricks, Azure             HDInsight, Azure Machine Learning, Azure SQL Database, SQL Server y más.
+    * Ejecución de paquetes SSIS : ejecute de forma nativa paquetes de SQL Server Integration Services (SSIS) en un entorno informático administrado de Azure.
+  > Al momento de seleccionar Runtime al momento de crear el Function App, admite la conexión con almacenes de datos y servicios de proceso con puntos de conexión de acceso         público. Al habilitar Virtual Network administrado y Azure Integration Runtime se admite la conexión a almacenes de datos mediante el servicio de Private Link en el entorno     de red privada.
 * ¿Por qué es necesario crear un Storage Account de la mano de un Function App?
+  > Esto se debe a que la Function App se basa en Azure Storage para operaciones como la gestión de disparadores y el registro de ejecuciones de funciones.
 * ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.
+  
+  
 * ¿Por qué la memoization falla o no funciona de forma correcta?
+  > La función recursiva funciona hasta cierto punto, aproximadamente 13000, a partir de ahí ocurre un error de Stack Overflow, ya que el número de llamadas recursivas excede la     capacidad del Call Stack.
 * ¿Cómo funciona el sistema de facturación de las Function App?
+
 * Informe
