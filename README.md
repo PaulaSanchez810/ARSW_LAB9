@@ -56,9 +56,18 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
   > Esto se debe a que la Function App se basa en Azure Storage para operaciones como la gestión de disparadores y el registro de ejecuciones de funciones.
 * ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.
   
+  > La versión Premium, utiliza el mismo sistema de facturación que las de pago por consumo, con cinco diferencias esenciales
+     * No tiene enfriamiento. Es decir, la función no se «apaga» nunca, y por ello está disponible de manera inmediata en cualquier momento aunque no haya sido lanzada en              bastante      tiempo.
+     * Tiene un rendimiento superior.
+     * Se puede conectar a redes virtuales.
+     * No tiene límite temporal de ejecución, aunque por defecto está configurado a 30 minutos.
+     * Es más caro.
+    
+  Por último el App Plan, es igual que si fuera a montar un Web App o cualquier otro tipo de App Service, siendo la gran diferencia con las dos opciones anteriores el que su       escalado está limitado al tamaño máximo establecido para el tipo de App Plan. Es decir, 10, 20 o 100 instancias si estoy utilizando un Plan del tipo Isolated con un             Application Service Enviroment (ASE).
   
 * ¿Por qué la memoization falla o no funciona de forma correcta?
   > La función recursiva funciona hasta cierto punto, aproximadamente 13000, a partir de ahí ocurre un error de Stack Overflow, ya que el número de llamadas recursivas excede la     capacidad del Call Stack.
 * ¿Cómo funciona el sistema de facturación de las Function App?
 
+  > La facturación del plan Premium se basa en la cantidad de segundos centrales y la memoria asignada a las instancias. Esta facturación difiere del plan de Consumo, que se         factura por ejecución y memoria consumida. No hay cargo de ejecución con el plan Premium. Se debe asignar al menos una instancia en todo momento por plan. Esta facturación       da como resultado un costo mensual mínimo por plan activo, independientemente de si la función está activa o inactiva.
 * Informe
