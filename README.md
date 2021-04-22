@@ -76,9 +76,13 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
   > La facturación del plan Premium se basa en la cantidad de segundos centrales y la memoria asignada a las instancias. Esta facturación difiere del plan de Consumo, que se         factura por ejecución y memoria consumida. No hay cargo de ejecución con el plan Premium. Se debe asignar al menos una instancia en todo momento por plan. Esta facturación       da como resultado un costo mensual mínimo por plan activo, independientemente de si la función está activa o inactiva.
 * Informe
   > Como se puede ver, en la siguientes imagenes, se puede concluir que la aplicación escalo sola por si misma, debido a que el tiempo de ejecución es casi el mismo para las dos     instancias. 
-  > NEWMAN Función iterativa 
+  > NEWMAN 
+  
   > ![](https://github.com/PaulaSanchez810/ARSW_LAB9/blob/master/images/img/1.png)
-  > NEWMAN Función Recursiva 
+  
+  
   > ![](https://github.com/PaulaSanchez810/ARSW_LAB9/blob/master/images/img/2.png)
+  
   > Nueva Function
+  
   > ![](https://github.com/PaulaSanchez810/ARSW_LAB9/blob/master/images/img/3.png)
