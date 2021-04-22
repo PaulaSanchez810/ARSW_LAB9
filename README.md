@@ -1,18 +1,22 @@
 ### Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software - ARSW
+> Integrantes:
+> * 👩 Paula Andrea Guevara Sánchez.
+> * 👨 Daniel Felipe Rincón Muñoz.
 
 ## Escalamiento en Azure con Maquinas Virtuales, Sacale Sets y Service Plans
 
 ### Dependencias
 * Cree una cuenta gratuita dentro de Azure. Para hacerlo puede guiarse de esta [documentación](https://azure.microsoft.com/en-us/free/search/?&ef_id=Cj0KCQiA2ITuBRDkARIsAMK9Q7MuvuTqIfK15LWfaM7bLL_QsBbC5XhJJezUbcfx-qAnfPjH568chTMaAkAsEALw_wcB:G:s&OCID=AID2000068_SEM_alOkB9ZE&MarinID=alOkB9ZE_368060503322_%2Bazure_b_c__79187603991_kwd-23159435208&lnkd=Google_Azure_Brand&dclid=CjgKEAiA2ITuBRDchty8lqPlzS4SJAC3x4k1mAxU7XNhWdOSESfffUnMNjLWcAIuikQnj3C4U8xRG_D_BwE). Al hacerlo usted contará con $200 USD para gastar durante 1 mes.
 
+---
 ### Parte 0 - Entendiendo el escenario de calidad
 
 Adjunto a este laboratorio usted podrá encontrar una aplicación totalmente desarrollada que tiene como objetivo calcular el enésimo valor de la secuencia de Fibonnaci.
 
 **Escalabilidad**
 Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000) de la secuencia de Fibonacci de forma concurrente y el sistema se encuentra bajo condiciones normales de operación, todas las peticiones deben ser respondidas y el consumo de CPU del sistema no puede superar el 70%.
-
+---
 ### Escalabilidad Serverless (Functions)
 
 1. Cree una Function App tal cual como se muestra en las  imagenes.
@@ -38,8 +42,8 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
 
 6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
-
-**Preguntas**
+---
+❓  **Preguntas**
 
 * ¿Qué es un Azure Function?
   > Azure Function es una solución para ejecutar fácilmente pequeños fragmentos de código o “funciones” en la nube, que nos presenta una multitud de nuevos triggers para poder       ejecutarlo.
@@ -71,3 +75,10 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
   > La facturación del plan Premium se basa en la cantidad de segundos centrales y la memoria asignada a las instancias. Esta facturación difiere del plan de Consumo, que se         factura por ejecución y memoria consumida. No hay cargo de ejecución con el plan Premium. Se debe asignar al menos una instancia en todo momento por plan. Esta facturación       da como resultado un costo mensual mínimo por plan activo, independientemente de si la función está activa o inactiva.
 * Informe
+  > Como se puede ver, en la siguientes imagenes, se puede concluir que la aplicación escalo sola por si misma, debido a que el tiempo de ejecución es casi el mismo para las dos     instancias. 
+  > NEWMAN Función iterativa 
+  > ![](https://github.com/PaulaSanchez810/ARSW_LAB9/blob/master/images/img/1.png)
+  > NEWMAN Función Recursiva 
+  > ![](https://github.com/PaulaSanchez810/ARSW_LAB9/blob/master/images/img/2.png)
+  > Nueva Function
+  > ![](https://github.com/PaulaSanchez810/ARSW_LAB9/blob/master/images/img/3.png)
